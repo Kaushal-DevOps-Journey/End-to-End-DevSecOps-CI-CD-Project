@@ -180,7 +180,7 @@ kubeaudit all
 You now have a **Kubernetes 1.30 cluster** running with **Docker (via cri-dockerd)**, **Calico CNI**, and **NGINX Ingress** — ready to deploy workloads.
 
 
-# SetUp SonarQube
+## ⚡ SetUp SonarQube
 
 ```bash
 #!/bin/bash
@@ -226,7 +226,7 @@ Then, you can run the script using:
 ```bash
 sudo chmod 666 /var/run/docker.sock
 ```
-## Create Sonarqube Docker container
+## ⚡ Create Sonarqube Docker container
 To run SonarQube in a Docker container with the provided command, you can follow these steps:
 
 1. Open your terminal or command prompt.
@@ -243,7 +243,7 @@ This command will download the `sonarqube:lts-community` Docker image from Docke
 
 This will start the SonarQube server, and you should be able to access it using the provided URL. If you're running Docker on a remote server or a different port, replace `localhost` with the appropriate hostname or IP address and adjust the port accordingly.
 
-# SetUp Nexus
+## ⚡ SetUp Nexus
 
 ```bash
 #!/bin/bash
@@ -286,7 +286,7 @@ Then, you can run the script using:
 ./install_docker.sh
 ```
 
-## Create Nexus using docker container
+## ⚡ Create Nexus using docker container
 
 To create a Docker container running Nexus 3 and exposing it on port 8081, you can use the following command:
 
@@ -303,7 +303,7 @@ This command does the following:
 
 After running this command, Nexus will be accessible on your host machine at http://IP:8081.
 
-## Get Nexus initial password
+## ⚡ Get Nexus initial password
 Your provided commands are correct for accessing the Nexus password stored in the container. Here's a breakdown of the steps:
 
 1. **Get Container ID**: You need to find out the ID of the Nexus container. You can do this by running:

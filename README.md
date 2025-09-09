@@ -411,7 +411,7 @@ sudo systemctl enable jenkins
 sudo systemctl start jenkins
 ```
 ### 2️⃣ Unlock Jenkins
-bash
+```bash
 Copy code
 sudo cat /var/lib/jenkins/secrets/initialAdminPassword
 Open in browser: http://<server-public-ip>:8080
@@ -419,8 +419,9 @@ Open in browser: http://<server-public-ip>:8080
 Paste the above password into Jenkins setup wizard
 
 Install Suggested Plugins
-
+```
 ### 3️⃣ Install Required Plugins
+```bash
 Go to Manage Jenkins → Plugins → Available Plugins and install:
 ✅ Eclipse Temurin Installer
 ✅ Pipeline Maven Integration
@@ -434,10 +435,10 @@ Go to Manage Jenkins → Plugins → Available Plugins and install:
 ✅ Kubernetes Client API
 ✅ Kubernetes Credentials Provider
 ✅ Prometheus Metrics
-
+```
 ### 4️⃣ Configure Tools
 Manage Jenkins → Tools
-
+```bash
 Add JDK via Temurin Installer
 
 Add Maven
@@ -445,10 +446,11 @@ Add Maven
 Add SonarQube Scanner
 
 Verify Docker is installed
+```
 
 ### 5️⃣ Add Credentials
 Go to Manage Jenkins → Credentials and add:
-
+```bash
 GitHub → Personal Access Token
 
 DockerHub → Username & Password
@@ -456,7 +458,7 @@ DockerHub → Username & Password
 Kubernetes → Kubeconfig file
 
 SonarQube → Authentication Token
-
+```
 ### 6️⃣ Configure SonarQube in Jenkins
 Go to Manage Jenkins → System → SonarQube Servers
 
@@ -473,17 +475,7 @@ Go to Manage Jenkins → Configure System
 
 Enable Prometheus Plugin
 
-Metrics exposed at:
-http://<jenkins-ip>:8080/prometheus
-
-### 8️⃣ Test Jenkins Setup
-Create a Pipeline Job
-
-Connect to GitHub repo
-
-Add Jenkinsfile
-
-Run Pipeline 🚀
+Metrics exposed at: http://<jenkins-ip>:8080/prometheus
 
 
 ### 📊 Monitoring
@@ -493,7 +485,7 @@ Grafana visualizes dashboards for CI/CD and cluster workloads
 
 
 
-### 📸 Live Screenshots
+### 📸 Live Project
 ```bash
 https://www.linkedin.com/feed/update/urn:li:activity:7370916028333113345/
 ```

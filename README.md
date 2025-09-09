@@ -342,7 +342,8 @@ Your provided commands are correct for accessing the Nexus password stored in th
 
 This process allows you to access the Nexus admin password stored within the container. Make sure to keep this password secure, as it grants administrative access to your Nexus instance.
 
-**🔧 Jenkins Plugins Used & Their Usage**
+
+## 📌 Jenkins Plugins Used & Their Usage
 
 | Plugin                              | Purpose                                                             |
 | ----------------------------------- | ------------------------------------------------------------------- |

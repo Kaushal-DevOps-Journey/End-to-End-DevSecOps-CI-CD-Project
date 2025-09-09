@@ -1,6 +1,6 @@
 # End-to-End DevSecOps CI/CD Project 🚀
 
-This project demonstrates an **End-to-End DevSecOps CI/CD pipeline** using Jenkins, SonarQube, Docker, Kubernetes, Nexus, Prometheus, Grafana, and Trivy.  
+This project demonstrates an **End-to-End DevSecOps CI/CD pipeline** using Jenkins, SonarQube, Docker, Kubernetes, Maven, Nexus, Prometheus, Grafana, and Trivy.  
 It covers the entire software delivery lifecycle — from code build, testing, security scanning, artifact management, to deployment and monitoring.  
 
 ---

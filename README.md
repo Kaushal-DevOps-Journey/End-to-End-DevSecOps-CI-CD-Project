@@ -461,31 +461,32 @@ SonarQube → Authentication Token
 ```
 ### 6️⃣ Configure SonarQube in Jenkins
 Go to Manage Jenkins → System → SonarQube Servers
-
+```bash
 Add:
 
 Name: SonarQube
 
 Server URL: http://<sonarqube-ip>:9000
-
+```
 Token: Generated from SonarQube
 
 ### 7️⃣ Enable Prometheus Metrics
 Go to Manage Jenkins → Configure System
-
+```bash
 Enable Prometheus Plugin
 
 Metrics exposed at: http://<jenkins-ip>:8080/prometheus
-
+```
 
 ### 📊 Monitoring
+```bash
 Prometheus scrapes Jenkins, Kubernetes, and Node Exporter metrics
 
 Grafana visualizes dashboards for CI/CD and cluster workloads
 
-
+```
 
 ### 📸 Live Project
-```bash
+
 https://www.linkedin.com/feed/update/urn:li:activity:7370916028333113345/
-```
+

@@ -1,4 +1,23 @@
-# End-to-End-DevSecOps-CI-CD-Project
+# End-to-End DevSecOps CI/CD Project 🚀
+
+This project demonstrates an **End-to-End DevSecOps CI/CD pipeline** using Jenkins, SonarQube, Docker, Kubernetes, Nexus, Prometheus, Grafana, and Trivy.  
+It covers the entire software delivery lifecycle — from code build, testing, security scanning, artifact management, to deployment and monitoring.  
+
+---
+
+## 🔥 Features
+
+- Jenkins Declarative Pipeline  
+- Maven Build & Test Execution  
+- SonarQube Code Quality Analysis  
+- Trivy Vulnerability Scanning  
+- Docker Image Build & Push to DockerHub  
+- Nexus Artifact Repository Integration  
+- Kubernetes Deployment & Service Exposure  
+- Prometheus & Grafana Monitoring  
+
+---
+
 
 # 🚀 Kubernetes Cluster Setup with kubeadm (v1.30 + Docker)
 
@@ -361,3 +380,117 @@ This process allows you to access the Nexus admin password stored within the con
 | **Prometheus Metrics**              | Exposes Jenkins metrics to Prometheus for monitoring                |
 
 
+---
+
+
+## ⚙️ Jenkins Setup
+
+### 1️⃣ Install Jenkins
+```bash
+# Update system
+sudo apt update -y
+
+# Install Java (Temurin JDK)
+sudo apt install openjdk-17-jdk -y
+
+# Add Jenkins repo key
+curl -fsSL https://pkg.jenkins.io/debian/jenkins.io-2023.key | sudo tee \
+  /usr/share/keyrings/jenkins-keyring.asc > /dev/null
+
+# Add Jenkins apt repository
+echo deb [signed-by=/usr/share/keyrings/jenkins-keyring.asc] \
+  https://pkg.jenkins.io/debian binary/ | sudo tee \
+  /etc/apt/sources.list.d/jenkins.list > /dev/null
+
+# Install Jenkins
+sudo apt update -y
+sudo apt install jenkins -y
+
+# Start and enable service
+sudo systemctl enable jenkins
+sudo systemctl start jenkins
+2️⃣ Unlock Jenkins
+bash
+Copy code
+sudo cat /var/lib/jenkins/secrets/initialAdminPassword
+Open in browser: http://<server-public-ip>:8080
+
+Paste the above password into Jenkins setup wizard
+
+Install Suggested Plugins
+
+3️⃣ Install Required Plugins
+Go to Manage Jenkins → Plugins → Available Plugins and install:
+✅ Eclipse Temurin Installer
+✅ Pipeline Maven Integration
+✅ Config File Provider
+✅ SonarQube Scanner
+✅ Kubernetes CLI
+✅ Kubernetes
+✅ Docker
+✅ Docker Pipeline
+✅ Stage View
+✅ Kubernetes Client API
+✅ Kubernetes Credentials Provider
+✅ Prometheus Metrics
+
+4️⃣ Configure Tools
+Manage Jenkins → Tools
+
+Add JDK via Temurin Installer
+
+Add Maven
+
+Add SonarQube Scanner
+
+Verify Docker is installed
+
+5️⃣ Add Credentials
+Go to Manage Jenkins → Credentials and add:
+
+GitHub → Personal Access Token
+
+DockerHub → Username & Password
+
+Kubernetes → Kubeconfig file
+
+SonarQube → Authentication Token
+
+6️⃣ Configure SonarQube in Jenkins
+Go to Manage Jenkins → System → SonarQube Servers
+
+Add:
+
+Name: SonarQube
+
+Server URL: http://<sonarqube-ip>:9000
+
+Token: Generated from SonarQube
+
+7️⃣ Enable Prometheus Metrics
+Go to Manage Jenkins → Configure System
+
+Enable Prometheus Plugin
+
+Metrics exposed at:
+http://<jenkins-ip>:8080/prometheus
+8️⃣ Test Jenkins Setup
+Create a Pipeline Job
+
+Connect to GitHub repo
+
+Add Jenkinsfile
+
+Run Pipeline 🚀
+
+📊 Monitoring
+Prometheus scrapes Jenkins, Kubernetes, and Node Exporter metrics
+
+Grafana visualizes dashboards for CI/CD and cluster workloads
+
+📸 Live Screenshots
+✅ Jenkins Pipeline Execution
+
+✅ Kubernetes Pods & Services
+
+✅ Grafana Dashboards

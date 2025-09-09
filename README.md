@@ -342,6 +342,8 @@ Your provided commands are correct for accessing the Nexus password stored in th
 
 This process allows you to access the Nexus admin password stored within the container. Make sure to keep this password secure, as it grants administrative access to your Nexus instance.
 
+**🔧 Jenkins Plugins Used & Their Usage**
+
 | Plugin                              | Purpose                                                             |
 | ----------------------------------- | ------------------------------------------------------------------- |
 | **Eclipse Temurin Installer**       | Installs Java (Temurin JDK) required for Maven builds               |
@@ -358,30 +360,3 @@ This process allows you to access the Nexus admin password stored within the con
 | **Prometheus Metrics**              | Exposes Jenkins metrics to Prometheus for monitoring                |
 
 
-
-
-🔧 Jenkins Plugins Used & Their Usage
-
-Eclipse Temurin Installer – Provides OpenJDK (Temurin) distributions for Jenkins, used to install and configure JDK 17 required for building Java applications.
-
-Pipeline Maven Integration – Integrates Apache Maven with Jenkins pipelines, enabling automatic handling of dependencies, test reports, and artifact archiving.
-
-Config File Provider – Allows storing and injecting configuration files (like Maven settings.xml, Kubernetes manifests, etc.) into Jenkins builds.
-
-SonarQube Scanner – Connects Jenkins with SonarQube for static code analysis and enforces code quality gates during the pipeline.
-
-Docker – Provides core Docker support inside Jenkins to build, run, and manage containers.
-
-Docker Pipeline Step – Adds pipeline steps for building and pushing Docker images in Jenkins declarative pipelines.
-
-Kubernetes CLI – Provides kubectl inside Jenkins pipelines to deploy applications to Kubernetes clusters.
-
-Kubernetes Plugin – Integrates Jenkins with Kubernetes, enabling Jenkins agents to run as pods and improving scalability.
-
-Kubernetes Client API – Provides Kubernetes API support to interact with clusters programmatically within Jenkins.
-
-Kubernetes Credentials – Manages Kubernetes cluster credentials securely in Jenkins for authentication and deployments.
-
-Prometheus Metrics – Exposes Jenkins metrics to Prometheus for monitoring and observability of pipelines and Jenkins health.
-
-Stage View – Adds a visual representation of pipeline stages, making it easier to track progress and debug failed stages.

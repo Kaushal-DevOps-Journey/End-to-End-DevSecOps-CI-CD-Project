@@ -384,9 +384,9 @@ This process allows you to access the Nexus admin password stored within the con
 
 
 ## ⚙️ Jenkins Setup
-
-### 1️⃣ Install Jenkins
 ```bash
+### 1️⃣ Install Jenkins
+
 # Update system
 sudo apt update -y
 
@@ -409,7 +409,8 @@ sudo apt install jenkins -y
 # Start and enable service
 sudo systemctl enable jenkins
 sudo systemctl start jenkins
-2️⃣ Unlock Jenkins
+```
+### 2️⃣ Unlock Jenkins
 bash
 Copy code
 sudo cat /var/lib/jenkins/secrets/initialAdminPassword
@@ -419,7 +420,7 @@ Paste the above password into Jenkins setup wizard
 
 Install Suggested Plugins
 
-3️⃣ Install Required Plugins
+### 3️⃣ Install Required Plugins
 Go to Manage Jenkins → Plugins → Available Plugins and install:
 ✅ Eclipse Temurin Installer
 ✅ Pipeline Maven Integration
@@ -434,7 +435,7 @@ Go to Manage Jenkins → Plugins → Available Plugins and install:
 ✅ Kubernetes Credentials Provider
 ✅ Prometheus Metrics
 
-4️⃣ Configure Tools
+### 4️⃣ Configure Tools
 Manage Jenkins → Tools
 
 Add JDK via Temurin Installer
@@ -445,7 +446,7 @@ Add SonarQube Scanner
 
 Verify Docker is installed
 
-5️⃣ Add Credentials
+### 5️⃣ Add Credentials
 Go to Manage Jenkins → Credentials and add:
 
 GitHub → Personal Access Token
@@ -456,7 +457,7 @@ Kubernetes → Kubeconfig file
 
 SonarQube → Authentication Token
 
-6️⃣ Configure SonarQube in Jenkins
+### 6️⃣ Configure SonarQube in Jenkins
 Go to Manage Jenkins → System → SonarQube Servers
 
 Add:
@@ -467,14 +468,15 @@ Server URL: http://<sonarqube-ip>:9000
 
 Token: Generated from SonarQube
 
-7️⃣ Enable Prometheus Metrics
+### 7️⃣ Enable Prometheus Metrics
 Go to Manage Jenkins → Configure System
 
 Enable Prometheus Plugin
 
 Metrics exposed at:
 http://<jenkins-ip>:8080/prometheus
-8️⃣ Test Jenkins Setup
+
+### 8️⃣ Test Jenkins Setup
 Create a Pipeline Job
 
 Connect to GitHub repo
@@ -483,13 +485,15 @@ Add Jenkinsfile
 
 Run Pipeline 🚀
 
----
+
 ### 📊 Monitoring
 Prometheus scrapes Jenkins, Kubernetes, and Node Exporter metrics
 
 Grafana visualizes dashboards for CI/CD and cluster workloads
 
----
+
 
 ### 📸 Live Screenshots
+```bash
 https://www.linkedin.com/feed/update/urn:li:activity:7370916028333113345/
+```

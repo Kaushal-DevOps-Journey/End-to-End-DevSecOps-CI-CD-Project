@@ -342,8 +342,25 @@ Your provided commands are correct for accessing the Nexus password stored in th
 
 This process allows you to access the Nexus admin password stored within the container. Make sure to keep this password secure, as it grants administrative access to your Nexus instance.
 
+| Plugin                              | Purpose                                                             |
+| ----------------------------------- | ------------------------------------------------------------------- |
+| **Eclipse Temurin Installer**       | Installs Java (Temurin JDK) required for Maven builds               |
+| **Pipeline Maven Integration**      | Provides Maven build steps and caching inside pipelines             |
+| **Config File Provider**            | Supplies Maven `settings.xml` and other config files to jobs        |
+| **SonarQube Scanner**               | Runs static code analysis & integrates with SonarQube server        |
+| **Kubernetes CLI**                  | Executes `kubectl` commands from Jenkins pipelines                  |
+| **Kubernetes**                      | Allows Jenkins agents/pods to be provisioned dynamically inside K8s |
+| **Docker**                          | Provides Docker client support inside Jenkins                       |
+| **Docker Pipeline**                 | Enables `docker.build` and `docker.push` steps in pipelines         |
+| **Stage View**                      | Provides a visual UI for Jenkins pipeline stages                    |
+| **Kubernetes Client API**           | Required by Kubernetes-related plugins to interact with cluster     |
+| **Kubernetes Credentials Provider** | Securely stores kubeconfig and cluster access credentials           |
+| **Prometheus Metrics**              | Exposes Jenkins metrics to Prometheus for monitoring                |
 
-###🔧 Jenkins Plugins Used & Their Usage
+
+
+
+🔧 Jenkins Plugins Used & Their Usage
 
 Eclipse Temurin Installer – Provides OpenJDK (Temurin) distributions for Jenkins, used to install and configure JDK 17 required for building Java applications.
 

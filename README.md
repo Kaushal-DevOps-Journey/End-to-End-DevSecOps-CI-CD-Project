@@ -21,7 +21,7 @@ It covers the entire software delivery lifecycle — from code build, testing, s
 <img width="1471" height="669" alt="image" src="https://github.com/user-attachments/assets/d2ba9190-2da6-46bb-9159-8da86e4924de" />
 
 ---
-# Kubernetes Cluster Setup with kubeadm (v1.30 + Docker)
+## ⚡Kubernetes Cluster Setup with kubeadm (v1.30 + Docker)
 
 This guide explains how to set up a Kubernetes cluster using **kubeadm**, with **Docker** as the container runtime (via `cri-dockerd`), and deploy **Calico CNI** for networking + **NGINX Ingress Controller**.
 

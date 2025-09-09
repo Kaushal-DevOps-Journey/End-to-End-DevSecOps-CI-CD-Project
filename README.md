@@ -483,7 +483,7 @@ Add Jenkinsfile
 
 Run Pipeline 🚀
 
-📊 Monitoring
+### 📊 Monitoring
 Prometheus scrapes Jenkins, Kubernetes, and Node Exporter metrics
 
 Grafana visualizes dashboards for CI/CD and cluster workloads

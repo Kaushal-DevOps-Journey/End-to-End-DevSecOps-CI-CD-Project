@@ -190,11 +190,12 @@ worker-node2       Ready    <none>          2m    v1.30.0
 ---
 ## ✅ Kubernetes cluster security scan (Run On Master)
 https://github.com/Shopify/kubeaudit/releases  --> Select Kubeaudit link according to architecture
+```bash
 wget <link>
 tar -xvzf kubeaudit_0.22.2_linux_amd64.tar.gz   ---> extract zipped file
 sudo mv kubeaudit /usr/local/bin
 kubeaudit all 
- 
+ ```
 
 
 ## 🎯 Conclusion
